@@ -1,11 +1,12 @@
 ---
 version: '3'
-
+## Update volumes to reflect the home directory of here galaxy will install ##
 services:
   galaxy:
     image: galaxy-dev:latest
     volumes:
-      - ${PWD}:/galaxy:z
+#      - ${PWD}:/galaxy:z
+      - /home/dave/galaxy:/galaxy:z
     ports:
       - '8000:8000'
     depends_on:
